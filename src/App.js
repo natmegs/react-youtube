@@ -5,6 +5,7 @@ import _ from 'lodash';
 import SearchBar from './components/search_bar';
 import VideoList from './components/video_list';
 import VideoDetail from './components/video_detail';
+import BrandHeader from './components/brand-header';
 
 const API_KEY = 'AIzaSyCY4tYo_3FJ9o-x_MAAZWjb9pEHKvvSHJU';
 
@@ -37,6 +38,7 @@ class App extends Component {
 
     return (
       <div className="container">
+        <BrandHeader />
         <SearchBar onSearchTermChange={videoSearch} />
         <div className="row">
           <VideoDetail video={this.state.selectedVideo} />
